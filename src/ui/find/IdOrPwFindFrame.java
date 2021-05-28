@@ -87,10 +87,10 @@ public class IdOrPwFindFrame extends JFrame {
 		separator_1.setBounds(391, 182, 231, 2);
 		contentPane.add(separator_1);
 		
-		JLabel FrameDescriptLabel = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("아이디/비밀번호 찾기"), 7,221,610,15),"굴림",15,Font.PLAIN)).getLabel();
+		JLabel FrameDescriptLabel = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("아이디, 비밀번호가 생각나지 않으세요?"), 7,221,610,15),"굴림",15,Font.PLAIN)).getLabel();
 		contentPane.add(FrameDescriptLabel);
 		
-		JLabel FrameDescriptLabel2 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("본인 인증을 통해 스타벅스  회원 아이디, 비밀번호를 찾으실 수 있습니다."), 7,246,610,15),"굴림",15,Font.PLAIN)).getLabel();
+		JLabel FrameDescriptLabel2 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("본인 인증을 통해 스타벅스  회원 아이디, 비밀번호를 찾으실 수 있습니다."), 7,246,610,15),"굴림",15,Font.BOLD)).getLabel();
 		contentPane.add(FrameDescriptLabel2);
 		
 		JPanel pnId = new JPanel();
@@ -100,10 +100,10 @@ public class IdOrPwFindFrame extends JFrame {
 		contentPane.add(pnId);
 		pnId.setLayout(null);
 		
-		JLabel FrameDescriptLabel3 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("본인 인증을 통해 스타벅스  회원 아이디, 비밀번호를 찾으실 수 있습니다."), 174, 10, 252,15),"굴림",15,Font.BOLD)).getLabel();
+		JLabel FrameDescriptLabel3 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("아이디 / 비밀번호 찾기"), 174, 10, 252,15),"굴림",12,Font.BOLD)).getLabel();
 		pnId.add(FrameDescriptLabel3);
 		
-		JLabel FrameDescriptLabel4 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("아래 버튼을 선택하시면, 본인인증을 통해 고객님의 아이디와 비밀번호를 찾아드립니다."), 12, 735, 576,15),"굴림",12,Font.PLAIN)).getLabel();
+		JLabel FrameDescriptLabel4 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("아래 버튼을 선택하시면, 본인인증을 통해 고객님의 아이디와 비밀번호를 찾아드립니다."), 12, 35, 576,15),"굴림",12,Font.PLAIN)).getLabel();
 		pnId.add(FrameDescriptLabel4);
 		
 		JButton btnFindId = new ButtonFont(new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("아이디 / 비밀번호 찾기"),0,102,51 ),255,255,255), 209,60,182,41),"굴림",12,Font.PLAIN).getButton();

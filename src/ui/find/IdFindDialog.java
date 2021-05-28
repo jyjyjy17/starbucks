@@ -99,25 +99,20 @@ public class IdFindDialog extends JDialog {
 	}
 
 	private void createPWFinder() {
-				JButton btnAdmin = new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("admin"),0,102,51 ),255,255,255), 308,20,82,23).getButton();
-
+		
 		
 		JPanel pnPwFind = new JPanel();
 		pnPwFind.setBackground(new Color(255, 255, 255));
 		pnCenter.add(pnPwFind, "pw");
 		pnPwFind.setLayout(null);
 
-		JLabel PurposeLabel = new LabelBackGround( Labelf(new LabelFont(new LabelBound(new JLabel("스타벅스 멤버 비밀번호 찾기"), 12, 10, 410, 15),"굴림",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
-
-		JLabel PurposeLabel = (JLabel) labelcreator.createWithFont("스타벅스 멤버 비밀번호 찾기","굴림", Font.PLAIN , 12, 10, 410, 15,12);
-		PurposeLabel.setForeground(new Color(0, 102, 51));
-		PurposeLabel.setBackground(Color.WHITE);
+		JLabel PurposeLabel = new LabelBackGround(new LabelForeGround(new LabelFont(new LabelBound(new JLabel("스타벅스 멤버 비밀번호 찾기"), 12, 10, 410, 15),"굴림",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
 		pnPwFind.add(PurposeLabel);
 
-		JLabel DescriptLabel = (JLabel) labelcreator.createWithFont("본인정보에 등록한 핸드폰번호와 입력한 핸드폰번호가 같아야","굴림", Font.PLAIN , 12, 35, 410, 15,12);
+		JLabel DescriptLabel = new LabelFont(new LabelBound(new JLabel("본인정보에 등록한 핸드폰번호와 입력한 핸드폰번호가 같아야"), 12, 35, 410, 15),"굴림",12,Font.PLAIN).getLabel();
 		pnPwFind.add(DescriptLabel);
 
-		JLabel DescriptLabel2 = (JLabel) labelcreator.createWithFont("인증번호를 받을 수 있습니다.","굴림", Font.PLAIN , 12, 54, 410, 15,12);
+		JLabel DescriptLabel2 = new LabelFont(new LabelBound(new JLabel("본인정보에 등록한 핸드폰번호와 입력한 핸드폰번호가 같아야"), 12, 54, 410, 15),"굴림",12,Font.PLAIN).getLabel();
 		pnPwFind.add(DescriptLabel2);
 
 		JSeparator separator_1 = new JSeparator();
@@ -125,12 +120,10 @@ public class IdFindDialog extends JDialog {
 		separator_1.setBounds(12, 79, 410, 2);
 		pnPwFind.add(separator_1);
 
-		JLabel lbId = (JLabel) labelcreator.createWithFont("아이디","굴림", Font.PLAIN , 12, 104, 72, 15,12);
-		lbId.setHorizontalAlignment(SwingConstants.LEFT);
+		JLabel lbId = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("아이디"), 12, 104, 72, 15),"굴림",12,Font.PLAIN)).getLabel();
 		pnPwFind.add(lbId);
 
-		JLabel lbPhone2 = (JLabel) labelcreator.createWithFont("핸드폰번호","굴림", Font.PLAIN ,12, 135, 72, 15,12);
-		lbPhone2.setHorizontalAlignment(SwingConstants.LEFT);
+		JLabel lbPhone2 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("핸드폰번호"), 12, 135, 72, 15),"굴림",12,Font.PLAIN)).getLabel();
 		pnPwFind.add(lbPhone2);
 
 		JComboBox comboPwPhone = new JComboBox();
@@ -156,8 +149,7 @@ public class IdFindDialog extends JDialog {
 		txtId.setBounds(96, 101, 198, 21);
 		pnPwFind.add(txtId);
 
-		JLabel phoneNumberSeperator = (JLabel) labelcreator.createWithFont("-","굴림", Font.PLAIN , 160, 135, 6, 15,12);
-		phoneNumberSeperator.setHorizontalAlignment(SwingConstants.CENTER);
+		JLabel phoneNumberSeperator  = new LabelHorizon(new LabelBound(new JLabel("-"), 160, 135, 6, 15)).getLabel();
 		pnPwFind.add(phoneNumberSeperator);
 
 		txtPwCode = new JTextField();
@@ -184,15 +176,11 @@ public class IdFindDialog extends JDialog {
 		separator_2.setBounds(12, 196, 410, 2);
 		pnPwFind.add(separator_2);
 
-		JButton btnPwFind = (JButton) buttoncreator.createWithFont("비밀번호 찾기", "굴림", Font.PLAIN,223, 208, 116, 23,12);
-		btnPwFind.setForeground(Color.WHITE);
-		btnPwFind.setBackground(new Color(0, 102, 51));
+		JButton btnPwFind = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("비밀번호 찾기"),0,102,51 ),255,255,255), 223,208,116,23),"굴림",12,Font.PLAIN).getButton();
 		btnPwFindFunction(btnPwFind);
 		pnPwFind.add(btnPwFind);
 
-		JButton btnPwCancel = (JButton) buttoncreator.createWithFont("취소", "굴림", Font.PLAIN,351, 208, 71, 23,12);
-		btnPwCancel.setForeground(Color.WHITE);
-		btnPwCancel.setBackground(new Color(0, 102, 51));
+		JButton btnPwCancel = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("비밀번호 찾기"),0,102,51 ),255,255,255), 351,208,71,23),"굴림",12,Font.PLAIN).getButton();
 		btnPwCancelFunction(btnPwCancel);
 		pnPwFind.add(btnPwCancel);
 
@@ -213,7 +201,7 @@ public class IdFindDialog extends JDialog {
 		txtPwPhone2.setBounds(178, 132, 52, 21);
 		pnPwFind.add(txtPwPhone2);
 
-		JLabel phoneNumberSeperator2 = (JLabel) labelcreator.createWithFont("-","굴림", Font.PLAIN , 242, 135, 6, 15,12);
+		JLabel phoneNumberSeperator2  = new LabelHorizon(new LabelBound(new JLabel("-"), 242, 135, 6, 15)).getLabel();
 		pnPwFind.add(phoneNumberSeperator2);
 
 		txtPwPhone3 = new JTextField();
@@ -232,8 +220,12 @@ public class IdFindDialog extends JDialog {
 		txtPwPhone3.setBounds(260, 132, 52, 21);
 		pnPwFind.add(txtPwPhone3);
 
-		JButton btnPwCode = (JButton) buttoncreator.createWithFont("인증번호", "굴림", Font.PLAIN,334, 131, 88, 23,12);
-		btnPwCode.setBackground(Color.WHITE);
+		JButton btnPwCode = new ButtonFont( new ButtonBound (new ButtonBackGround(new JButton("인증번호"),255,255,255 ), 334,131,88,23),"굴림",12,Font.PLAIN).getButton();
+		btnPwCodeFunction(btnPwCode);
+		pnPwFind.add(btnPwCode);
+	}
+
+	private void btnPwCodeFunction(JButton btnPwCode) {
 		btnPwCode.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Random ran = new Random();
@@ -249,8 +241,6 @@ public class IdFindDialog extends JDialog {
 				}
 			}
 		});
-
-		pnPwFind.add(btnPwCode);
 	}
 
 	private void btnPwCancelFunction(JButton btnPwCancel) {
@@ -288,19 +278,15 @@ public class IdFindDialog extends JDialog {
 	}
 
 	private void createIDFinder() {
-		JButtonCreator buttoncreator = new JButtonCreator();
-		JLabelCreator labelcreator = new JLabelCreator();
 		JPanel pnIdFind = new JPanel();
 		pnIdFind.setBackground(Color.WHITE);
 		pnCenter.add(pnIdFind, "id");
 		pnIdFind.setLayout(null);
 
-		JLabel lbName = (JLabel) labelcreator.createWithFont("이름","굴림", Font.PLAIN , 12, 104, 72, 15,12);
-		lbName.setHorizontalAlignment(SwingConstants.LEFT);
+		JLabel lbName = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("이름"), 12, 104, 72, 15),"굴림",12,Font.PLAIN)).getLabel();
 		pnIdFind.add(lbName);
 
-		JLabel lbPhone = (JLabel) labelcreator.createWithFont("핸드폰번호","굴림", Font.PLAIN , 12, 135, 72, 15,12);
-		lbPhone.setHorizontalAlignment(SwingConstants.LEFT);
+		JLabel lbPhone = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("핸드폰번호"), 12, 135, 72, 15),"굴림",12,Font.PLAIN)).getLabel();
 		pnIdFind.add(lbPhone);
 
 		txtName = new JTextField();
@@ -326,8 +312,8 @@ public class IdFindDialog extends JDialog {
 		comboPhone.setBounds(96, 132, 52, 21);
 		pnIdFind.add(comboPhone);
 
-		JLabel lblNewLabel = (JLabel) labelcreator.createWithFont("-","굴림", Font.PLAIN ,160, 135, 6, 15,12);
-		pnIdFind.add(lblNewLabel);
+		JLabel PhoneNumberSeperator = new LabelHorizon(new LabelBound(new JLabel("-"), 160, 135, 6, 15)).getLabel();
+		pnIdFind.add(PhoneNumberSeperator);
 
 		txtPhone = new JTextField();
 		txtPhone.addFocusListener(new FocusAdapter() {
@@ -345,24 +331,8 @@ public class IdFindDialog extends JDialog {
 		pnIdFind.add(txtPhone);
 		txtPhone.setColumns(10);
 
-		JButton btnCode = (JButton) buttoncreator.createWithFont("인증번호", "굴림", Font.PLAIN,334, 131, 88, 23,12);
-		btnCode.setBackground(new Color(255, 255, 255));
-		btnCode.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				Random ran = new Random();
-				int n = ran.nextInt(900000) + 100000;
-				String varCode = String.valueOf(n);
-
-				if (txtName.getText().isEmpty() && txtPhone.getText().isEmpty() && txtPhone2.getText().isEmpty()) {
-					System.out.println("등록되지 않은 번호입니다.");
-					JOptionPane.showMessageDialog(null, "등록되지 않은 번호입니다.");
-				} else {
-					System.out.println("인증번호는 '" + varCode + "' 입니다.");
-					JOptionPane.showMessageDialog(null, "인증번호는 '" + varCode + "' 입니다.");
-				}
-			}
-		});
+		JButton btnCode = new ButtonFont( new ButtonBound (new ButtonBackGround(new JButton("인증번호"),255,255,255 ), 334,131,88,23),"굴림",12,Font.PLAIN).getButton();
+		btnCodeFunction(btnCode);
 		pnIdFind.add(btnCode);
 
 		txtCode = new JTextField();
@@ -395,15 +365,13 @@ public class IdFindDialog extends JDialog {
 		pnIdFind.add(txtCode);
 		txtCode.setColumns(10);
 
-		JLabel TitleIDfinderLabel =(JLabel) labelcreator.createWithFont("스타벅스 멤버 아이디 찾기","굴림", Font.PLAIN ,12, 10, 410, 15,12);
-		TitleIDfinderLabel.setForeground(new Color(0, 102, 51));
-		TitleIDfinderLabel.setBackground(new Color(255, 255, 255));
+		JLabel TitleIDfinderLabel = new LabelBackGround(new LabelForeGround(new LabelFont(new LabelBound(new JLabel("스타벅스 멤버 아이디 찾기"), 12, 10, 410, 15),"굴림",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
 		pnIdFind.add(TitleIDfinderLabel);
 
-		JLabel DescriptIDfinderLabel = (JLabel) labelcreator.createWithFont("본인정보에 등록한 핸드폰번호와 입력한 핸드폰번호가 같아야","굴림", Font.PLAIN ,12, 35, 410, 15,12);
+		JLabel DescriptIDfinderLabel = new LabelFont(new LabelBound(new JLabel("본인정보에 등록한 핸드폰번호와 입력한 핸드폰번호가 같아야"), 12, 35, 410, 15),"굴림",12,Font.PLAIN).getLabel();
 		pnIdFind.add(DescriptIDfinderLabel);
 
-		JLabel DescriptIDfinderLabel2 =(JLabel) labelcreator.createWithFont("인증번호를 받을 수 있습니다.","굴림", Font.PLAIN ,12, 54, 410, 15,12);
+		JLabel DescriptIDfinderLabel2 = new LabelFont(new LabelBound(new JLabel("본인정보에 등록한 핸드폰번호와 입력한 핸드폰번호가 같아야"), 12, 54, 410, 15),"굴림",12,Font.PLAIN).getLabel();
 		pnIdFind.add(DescriptIDfinderLabel2);
 
 		JSeparator separator = new JSeparator();
@@ -411,17 +379,11 @@ public class IdFindDialog extends JDialog {
 		separator.setBounds(12, 79, 410, 2);
 		pnIdFind.add(separator);
 
-		JButton btnCancel = (JButton) buttoncreator.createWithFont("취소", "굴림", Font.PLAIN,351, 208, 71, 23,12);
-		btnCancelFunction(btnCancel);
-		btnCancel.setForeground(new Color(255, 255, 255));
-		btnCancel.setBackground(new Color(0, 102, 51));
+		JButton btnCancel = new ButtonFont( new ButtonBound (new ButtonForeGround(new ButtonBackGround(new JButton("취소"),0,102,51 ),255, 255, 255), 351,208,71,23),"굴림",12,Font.PLAIN).getButton();
 		pnIdFind.add(btnCancel);
 
-		JButton btnIdFind =(JButton) buttoncreator.createWithFont("아이디 찾기", "굴림", Font.PLAIN,223, 208, 116, 23,12);
-		btnIdFind.setForeground(new Color(255, 255, 255));
-		btnIdFind.setBackground(new Color(0, 102, 51));
+		JButton btnIdFind = new ButtonFont( new ButtonBound (new ButtonForeGround(new ButtonBackGround(new JButton("아이디 찾기"),0,102,51 ),255, 255, 255), 223, 208, 116, 23),"굴림",12,Font.PLAIN).getButton();
 		btnIdFindFunction(btnIdFind);
-
 		pnIdFind.add(btnIdFind);
 
 		JSeparator separator_3 = new JSeparator();
@@ -445,10 +407,27 @@ public class IdFindDialog extends JDialog {
 		txtPhone2.setBounds(260, 132, 52, 21);
 		pnIdFind.add(txtPhone2);
 
-		JLabel label_5 = new JLabel("-");
-		label_5.setHorizontalAlignment(SwingConstants.CENTER);
-		label_5.setBounds(242, 135, 6, 15);
-		pnIdFind.add(label_5);
+		JLabel PhoneNumberSeperator2 = new LabelHorizon(new LabelBound(new JLabel("-"), 242, 135, 6, 15)).getLabel();
+		pnIdFind.add(PhoneNumberSeperator2);
+	}
+
+	private void btnCodeFunction(JButton btnCode) {
+		btnCode.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				Random ran = new Random();
+				int n = ran.nextInt(900000) + 100000;
+				String varCode = String.valueOf(n);
+
+				if (txtName.getText().isEmpty() && txtPhone.getText().isEmpty() && txtPhone2.getText().isEmpty()) {
+					System.out.println("등록되지 않은 번호입니다.");
+					JOptionPane.showMessageDialog(null, "등록되지 않은 번호입니다.");
+				} else {
+					System.out.println("인증번호는 '" + varCode + "' 입니다.");
+					JOptionPane.showMessageDialog(null, "인증번호는 '" + varCode + "' 입니다.");
+				}
+			}
+		});
 	}
 
 	private void btnIdFindFunction(JButton btnIdFind) {
@@ -487,16 +466,31 @@ public class IdFindDialog extends JDialog {
 	}
 
 	private void createMenuBar() {
-		JButtonCreator buttoncreator = new JButtonCreator();
-		JLabelCreator labelcreator = new JLabelCreator();
-		
+	
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBackground(new Color(0, 102, 51));
 		menuBar.setBounds(0, 0, 434, 25);
 		getContentPane().add(menuBar);
 
-		JButton btnFindId =  (JButton) buttoncreator.createWithFont("아이디 찾기", "굴림", Font.PLAIN,223, 208, 116, 23,12);
-		btnFindId.setBackground(Color.WHITE);
+		JButton btnFindId = new ButtonFont(new ButtonBackGround(new JButton("아이디 찾기"),255, 255, 255),"굴림",12,Font.PLAIN).getButton();
+		btnFindIdFunction(btnFindId);
+		menuBar.add(btnFindId);
+
+		JButton btnFindPw = new ButtonFont(new ButtonBackGround(new JButton("비밀번호 찾기"),255, 255, 255),"굴림",12,Font.PLAIN).getButton();
+		btnFindPwFunction(btnFindPw);
+		menuBar.add(btnFindPw);
+	}
+
+	private void btnFindPwFunction(JButton btnFindPw) {
+		btnFindPw.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CardLayout c = (CardLayout) pnCenter.getLayout();
+				c.show(pnCenter, "pw");
+			}
+		});
+	}
+
+	private void btnFindIdFunction(JButton btnFindId) {
 		btnFindId.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout c = (CardLayout) pnCenter.getLayout();
@@ -504,16 +498,5 @@ public class IdFindDialog extends JDialog {
 
 			}
 		});
-		menuBar.add(btnFindId);
-
-		JButton btnFindPw = (JButton) buttoncreator.createWithFont("비밀번호 찾기", "굴림", Font.PLAIN,223, 208, 116, 23,12);
-		btnFindPw.setBackground(Color.WHITE);
-		btnFindPw.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				CardLayout c = (CardLayout) pnCenter.getLayout();
-				c.show(pnCenter, "pw");
-			}
-		});
-		menuBar.add(btnFindPw);
 	}
 }
