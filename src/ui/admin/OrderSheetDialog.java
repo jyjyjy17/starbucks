@@ -1,6 +1,6 @@
 package ui.admin;
 
-import adminFactory_sh.JButtonCreator;
+import adminFactory_jy.JButtonCreator;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -70,13 +70,13 @@ public class OrderSheetDialog extends JDialog {
 							boolean b =mgr.editOrderStatus(OrderInfo.getOrderNumber(),  order.ORDER_PREPARE);
 //							System.out.println(b);
 							if(b ==true) {
-								JOptionPane.showMessageDialog(null, "ÁÖ¹®¹Ş±â¼º°ø");
+								JOptionPane.showMessageDialog(null, "ì£¼ë¬¸ë°›ê¸°ì„±ê³µ");
 								dispose();
 							}else {
-								JOptionPane.showMessageDialog(null, "ÁÖ¹®¹Ş±â½ÇÆĞ");
+								JOptionPane.showMessageDialog(null, "ì£¼ë¬¸ë°›ê¸°ì‹¤íŒ¨");
 							}
 						} else {
-							JOptionPane.showMessageDialog(null, "ÀÌ¹Ì ÁØºñÁßÀÌ°Å³ª ÁÖ¹®¿Ï·áµÈ »óÅÂÀÔ´Ï´Ù.");
+							JOptionPane.showMessageDialog(null, "ì´ë¯¸ ì¤€ë¹„ì¤‘ì´ê±°ë‚˜ ì£¼ë¬¸ì™„ë£Œëœ ìƒíƒœì…ë‹ˆë‹¤.");
 						}
 						
 						
@@ -103,8 +103,8 @@ public class OrderSheetDialog extends JDialog {
 	public void showSelectedOrder() {
 		OrderDBMgr mgr = new OrderDBMgr();
 		textArea.setText("");
-		textArea.append("------------------------------------½ºÅ¸¹÷½º ÁÖ¹®¼­---------------------------------------\n");
-		textArea.append("ÁÖ¹®¹øÈ£\t   "+"ÁÖ¹®ÀÚ¾ÆÀÌµğ\t   "+ "    ÁÖ¹®»óÇ° \t               "+" ¼ö·®  \n   ");
+		textArea.append("------------------------------------ìŠ¤íƒ€ë²…ìŠ¤ ì£¼ë¬¸ì„œ---------------------------------------\n");
+		textArea.append("ì£¼ë¬¸ë²ˆí˜¸\t   "+"ì£¼ë¬¸ìì•„ì´ë””\t   "+ "    ì£¼ë¬¸ìƒí’ˆ \t               "+" ìˆ˜ëŸ‰  \n   ");
 		
 		int totalPrice = 0;
 		int totalQantity = 0;
@@ -116,13 +116,13 @@ public class OrderSheetDialog extends JDialog {
 			String productName= order.getProductName();
 			int quantity = order.getQuantity();
 			
-			textArea.append(orderNumber + "\t" + memberLogin + "\t" + productName+ "\t" + String.valueOf(quantity) + "°³\n");
+			textArea.append(orderNumber + "\t" + memberLogin + "\t" + productName+ "\t" + String.valueOf(quantity) + "ê°œ\n");
 			totalPrice += price;
 			totalQantity +=quantity;
 			
 		}
 		textArea.append("-----------------------------------------------------------------------------------------------\n ");
-		textArea.append("                                             ÃÑ ¼ö·®:" +totalQantity+ " ÃÑ ±İ¾× :" +totalPrice +"¿ø\n");
+		textArea.append("                                             ì´ ìˆ˜ëŸ‰:" +totalQantity+ " ì´ ê¸ˆì•¡ :" +totalPrice +"ì›\n");
 		textArea.append("-----------------------------------------------------------------------------------------------\n ");
 
 	}
