@@ -1,7 +1,7 @@
 package ui.admin;
 
-import adminFactory_sh.JButtonCreator;
-import adminFactory_sh.JLabelCreator;
+import adminFactory_jy.JButtonCreator;
+import adminFactory_jy.JLabelCreator;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -36,6 +36,8 @@ import java.awt.event.MouseEvent;
 
 public class OrderInfo extends JFrame {
 
+	private JButtonCreator btncreator;
+	private JLabelCreator labelcreator;
 	private JPanel contentPane;
 	private JTable table;
 	OrderDBMgr mgr;
@@ -81,10 +83,7 @@ public class OrderInfo extends JFrame {
 		contentPane.add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("\uC8FC\uBB38 \uB0B4\uC5ED");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 16));
-		lblNewLabel.setBounds(12, 10, 145, 50);
+		JLabel lblNewLabel = (JLabel) labelcreator.createWithHorizontal("\uC8FC\uBB38 \uB0B4\uC5ED","ë§‘ì€ ê³ ë”•",112, 10, 145, 50, 16);
 		panel_1.add(lblNewLabel);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -126,7 +125,7 @@ public class OrderInfo extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				boolean b =mgr.editOrderStatus(getOrderNumber(),  order.ORDER_FINISHED);
 				if(b) {
-					JOptionPane.showMessageDialog(null, "ÁÖ¹®¿Ï·á");
+					JOptionPane.showMessageDialog(null, "ì£¼ë¬¸ì™„ë£Œ");
 				}
 			}
 		});
@@ -146,7 +145,7 @@ public class OrderInfo extends JFrame {
 
 
 	public void showOrderTable() {
-		String [] columnNames = {"°ü¸®¹øÈ£","ÁÖ¹®¹øÈ£","ÁÖ¹®ÀÚ¾ÆÀÌµğ","»óÇ°¸í","¼ö·®","ÃÑ±İ¾×","ÁÖ¹®½Ã°£","ÁÖ¹®»óÅÂ"};
+		String [] columnNames = {"ê´€ë¦¬ë²ˆí˜¸","ì£¼ë¬¸ë²ˆí˜¸","ì£¼ë¬¸ìì•„ì´ë””","ìƒí’ˆëª…","ìˆ˜ëŸ‰","ì´ê¸ˆì•¡","ì£¼ë¬¸ì‹œê°„","ì£¼ë¬¸ìƒíƒœ"};
 		ArrayList<order> odList =mgr.getAllOrders();
 		Object [][] data = new Object[odList.size()][columnNames.length];
 	
@@ -156,24 +155,25 @@ public class OrderInfo extends JFrame {
 	         data[i][1] = mb.getOrderNumber();
 	         data[i][2] = mb.getMemberLogin();
 	         data[i][3] = mb.getProductName();
-	         data[i][4] = mb.getQuantity() + "°³";
-	         data[i][5] = mb.getTotalPrice() +"¿ø";
+	         data[i][4] = mb.getQuantity() + "ê°œ";
+	         data[i][5] = mb.getTotalPrice() +"ì›";
 	         data[i][6] = mb.getOrderedTime();
 //	         data[i][7] = mb.getOrderStatus();
-	         int orderstatus =mb.getOrderStatus();
+	         int orderstatus = mb.getOrderStatus();
 	         if(orderstatus == order.ORDER_REQUEST) {
-	        	 data[i][7] = "ÁÖ¹®´ë±âÁß";
-	         }else if(orderstatus == order.ORDER_PREPARE) {
-	        	 data[i][7] = "ÁÖ¹®ÁØºñÁß";
-	        	 
-	         }else if(orderstatus == order.ORDER_FINISHED) {
-	        	 data[i][7] = "ÁÖ¹®¿Ï·á";
+	        	 data[i][7] = "ì£¼ë¬¸ëŒ€ê¸°ì¤‘";
+	         }
+	         else if(orderstatus == order.ORDER_PREPARE) {
+	        	 data[i][7] = "ì£¼ë¬¸ì¤€ë¹„ì¤‘";
+	         }
+	         else if(orderstatus ==  order.ORDER_FINISHED) {
+	        	 data[i][7] = "ì£¼ë¬¸ì™„ë£Œ";
 	         }else {
-	        	 data[i][7] = "ÁÖ¹®¿À·ù";
+	        	 data[i][7] = "ì£¼ë¬¸ì˜¤ë¥˜";
 	         }
 	         
 	         
-	         }
+	    }
 		
 		DefaultTableModel dtm = new DefaultTableModel(data, columnNames);
 		table.setModel(dtm);
