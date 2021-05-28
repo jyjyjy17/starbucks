@@ -11,8 +11,13 @@ import javax.swing.border.EmptyBorder;
 import data.Member;
 import data.db.MemberDBMgr;
 import ui.main.MainFrame;
-import uimainFactory.JButtonCreator;
-import uimainFactory.JLabelCreator;
+
+import LabelDecorate.LabelForeGround;
+import LabelDecorate.LabelBackGround;
+import LabelDecorate.LabelBound;
+import LabelDecorate.LabelFont;
+import LabelDecorate.LabelHorizon;
+import LabelDecorate.LabelIcon;
 
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
@@ -32,6 +37,21 @@ import java.awt.Font;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
+import LabelDecorate.LabelBackGround;
+import LabelDecorate.LabelBound;
+import LabelDecorate.LabelFont;
+import LabelDecorate.LabelForeGround;
+import LabelDecorate.LabelHorizon;
+import LabelDecorate.LabelIcon;
+
+import ButtonDecorate.ButtonBackGround;
+import ButtonDecorate.ButtonBound;
+import ButtonDecorate.ButtonComponent;
+import ButtonDecorate.ButtonDecorator;
+import ButtonDecorate.ButtonFont;
+import ButtonDecorate.ButtonForeGround;
+import ButtonDecorate.ButtonIcon;
+import ButtonDecorate.ButtonRightAlignment;
 public class IdFindDialog extends JDialog {
 
 	/**
@@ -79,13 +99,15 @@ public class IdFindDialog extends JDialog {
 	}
 
 	private void createPWFinder() {
-		JButtonCreator buttoncreator = new JButtonCreator();
-		JLabelCreator labelcreator = new JLabelCreator();
+				JButton btnAdmin = new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("admin"),0,102,51 ),255,255,255), 308,20,82,23).getButton();
+
 		
 		JPanel pnPwFind = new JPanel();
 		pnPwFind.setBackground(new Color(255, 255, 255));
 		pnCenter.add(pnPwFind, "pw");
 		pnPwFind.setLayout(null);
+
+		JLabel PurposeLabel = new LabelBackGround( Labelf(new LabelFont(new LabelBound(new JLabel("½ºÅ¸¹÷½º ¸â¹ö ºñ¹Ð¹øÈ£ Ã£±â"), 12, 10, 410, 15),"±¼¸²",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
 
 		JLabel PurposeLabel = (JLabel) labelcreator.createWithFont("½ºÅ¸¹÷½º ¸â¹ö ºñ¹Ð¹øÈ£ Ã£±â","±¼¸²", Font.PLAIN , 12, 10, 410, 15,12);
 		PurposeLabel.setForeground(new Color(0, 102, 51));
