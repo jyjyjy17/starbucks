@@ -82,9 +82,6 @@ public class MainFrame extends JFrame {
 	 * @return 
 	 */
 	public MainFrame() {
-
-		
-		
 		setJframe();
 		// 새로운 창이 만들어지는 위치설정
 		setBounds(100, 100, 821, 536);

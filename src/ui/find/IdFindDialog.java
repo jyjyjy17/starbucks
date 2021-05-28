@@ -180,7 +180,7 @@ public class IdFindDialog extends JDialog {
 		btnPwFindFunction(btnPwFind);
 		pnPwFind.add(btnPwFind);
 
-		JButton btnPwCancel = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("비밀번호 찾기"),0,102,51 ),255,255,255), 351,208,71,23),"굴림",12,Font.PLAIN).getButton();
+		JButton btnPwCancel = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("취소"),0,102,51 ),255,255,255), 351,208,71,23),"굴림",12,Font.PLAIN).getButton();
 		btnPwCancelFunction(btnPwCancel);
 		pnPwFind.add(btnPwCancel);
 
