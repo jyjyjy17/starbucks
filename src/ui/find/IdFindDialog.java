@@ -88,14 +88,16 @@ public class IdFindDialog extends JDialog {
 		getContentPane().setLayout(null);
 
 		createMenuBar();
+		createpnCenter();
+		createIDFinder();
+		createPWFinder();
+	}
 
+	private void createpnCenter() {
 		pnCenter = new JPanel();
 		pnCenter.setBounds(0, 20, 434, 241);
 		getContentPane().add(pnCenter);
 		pnCenter.setLayout(new CardLayout(0, 0));
-
-		createIDFinder();
-		createPWFinder();
 	}
 
 	private void createPWFinder() {
