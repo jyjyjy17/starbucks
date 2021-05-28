@@ -86,7 +86,7 @@ public class MainFrame extends JFrame {
 		// 새로운 창이 만들어지는 위치설정
 		setBounds(100, 100, 821, 536);
 		//ContentPane 설정
-		settingContentPane();
+		setContentPane();
 
 		displayStarbucksLogo();
 
@@ -127,7 +127,7 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	private void settingContentPane() {
+	private void setContentPane() {
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
